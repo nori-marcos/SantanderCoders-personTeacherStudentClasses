@@ -1,0 +1,50 @@
+class Person {
+
+    constructor(firstName, lastName, age, gender, interests){
+        this.firstName = firstName,
+        this.lastName = lastName,
+        this.age = age,
+        this.gender = gender,
+        this.interests = interests
+    }
+
+    bio () {
+        return `${this.firstName} ${this.lastName} is ${this.age} years old. They like ${this.interests}`
+    }
+
+    greeting () {
+        return `Hi! I'm ${this.firstName} ${this.lastName}!`;
+    }
+
+
+}
+
+const marcos  = new Person ('Marcos', 'Miyata', 27, 'male', ['arts', 'music'])
+console.log(marcos.bio())
+console.log(marcos.greeting())
+
+class Teacher extends Person {
+    constructor(firstName, lastName, age, gender, interests, subject){
+        super(firstName, lastName, age, gender, interests)
+        this.subject = subject
+    }
+    
+    bio () {
+        super(bio)
+    }
+    
+    greeting () {
+        return `Hello. My name is ${this.lastName}, and I teach ${this.subject}.`
+    }
+}
+
+class Student extends Person {
+    constructor(firstName, lastName, age, gender, interests){
+        super(firstName, lastName, age, gender, interests)
+    }
+    
+    greeting () {
+        return `Yo! My name is ${this.firstName} ${this.lastName}.`;
+    }
+}
+
