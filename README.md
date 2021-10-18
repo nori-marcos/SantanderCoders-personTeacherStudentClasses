@@ -1,4 +1,4 @@
-# Classes
+# Person, teacher and student classes
 This project was created to practice the learned concepts about classes in JavaScript.
 
 ## Description
